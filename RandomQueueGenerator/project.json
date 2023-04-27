@@ -1,0 +1,65 @@
+{
+  "name": "RandomQueueGenerator",
+  "description": "Blank Process",
+  "main": "GenerateQueue.cs",
+  "dependencies": {
+    "UiPath.System.Activities": "[23.6.0-alpha.3678066]",
+    "UiPath.Testing.Activities": "[23.6.0-alpha.3708289]"
+  },
+  "webServices": [
+    {
+      "namespace": "QueueDefinitions",
+      "serviceDocument": "Services\\QueueDefinitions.json",
+      "webDocumentUri": "https://staging.uipath.com/uipatulggiey/uipathDefault/orchestrator_/swagger/v16.0/swagger.json",
+      "uniqueReference": "b2wyNFv7LGe3rdVZr7cL48iAeIlnflSYDwenUCcrybs="
+    }
+  ],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "CSharp",
+  "entryPoints": [
+    {
+      "filePath": "GenerateQueue.cs",
+      "uniqueId": "072d0c96-ceba-482b-b572-a833e46fdcf2",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

@@ -1,0 +1,77 @@
+{
+  "name": "CodedWorkflowInteroperability",
+  "description": "Blank Process",
+  "main": "CodedAutomationUsingWorkflow.cs",
+  "dependencies": {
+    "UiPath.System.Activities": "[23.6.0-alpha.3755321]",
+    "UiPath.Testing.Activities": "[23.6.0-alpha.3742221]",
+    "UiPath.UIAutomation.Activities": "[23.6.0-alpha.3753776]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "CodedAutomationUsingWorkflow.cs",
+      "uniqueId": "29e0f12e-db70-4c3b-b039-43a79aaaf3c7",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CodedAutomationUsingCodedAutomation.cs",
+      "uniqueId": "576c3044-7fed-4c2b-a93a-9884241c34f0",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "BusinessProcess\\CodedResetAssetValue.cs",
+      "uniqueId": "358c3281-d555-4061-b89c-be1532e65ec2",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "ActivityWrapperExample\\CodedWrapperForModifyText.xaml",
+      "uniqueId": "f8cd74ca-64b6-4565-a2ad-f9beeafd6287",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
