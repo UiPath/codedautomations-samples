@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Security;
+using UiPath.CodedWorkflows;
 using UiPath.Core;
+using UiPath.Core.Activities;
 using UiPath.Core.Activities.Storage;
 using UiPath.Orchestrator.Client.Models;
 using UiPath.Testing;
@@ -16,20 +19,29 @@ using UiPath.UIAutomationNext.Enums;
 //         No warranty or technical support is provided for this preview feature.
 //         Missing features or encountering bugs? Please click the feedback button in the top-right corner and let us know!
 // Please delete these comments after you've read and acknowledged them. For more information, please visit the documentation over at https://docs.uipath.com/studio/lang-en/v2023.4/docs/coded-automations.
-namespace CodedWorkflowInteroperability
+namespace Form_CrossBrowser_Tests
 {
-  public class TimeSpanHelper
+  public class TestCase : CodedWorkflow
   {
-    private static Random _random = new Random();
-    private static object _lockObj = new object();
-
-    public static TimeSpan GetRandomTimeSpanBetween(int lowerBoundMs, int upperBoundMs)
+    [TestCase]
+    public void Execute(System.String browserName = "msedge.exe")
     {
-      lock (_lockObj)
-      {
-        var ms = _random.Next(lowerBoundMs, upperBoundMs);
-        return TimeSpan.FromMilliseconds(ms);
-      }
+      // Arrange
+      var screen = uiAutomation.Open("FormScreen", Options.AppOpen().WithVariable("browserName", browserName));
+      screen.TypeInto("Name", "Alvin");
+
+      var credential = system.GetCredential("FormCredential", null, out var password, CacheStrategyEnum.None, 30000);
+      screen.TypeInto("Email", credential);
+
+      var actualPassword = new System.Net.NetworkCredential(string.Empty, password).Password;
+      screen.TypeInto("Password", actualPassword);
+      screen.TypeInto("ConfirmPassword", actualPassword);
+
+      // Act
+      screen.Click("Submit");
+
+      // Assert
+      testing.VerifyExpression(screen.GetText("Verification") == "Alvin");
     }
   }
 }

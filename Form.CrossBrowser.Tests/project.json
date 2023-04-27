@@ -1,7 +1,7 @@
 {
-  "name": "CodedWorkflowInteroperability",
-  "description": "Blank Process",
-  "main": "CodedAutomationUsingWorkflow.cs",
+  "name": "Form.CrossBrowser.Tests",
+  "description": "Test Automation Project",
+  "main": "Main.xaml",
   "dependencies": {
     "UiPath.System.Activities": "[23.5.0-preview]",
     "UiPath.Testing.Activities": "[23.5.0-preview]",
@@ -32,7 +32,7 @@
   },
   "designOptions": {
     "projectProfile": "Developement",
-    "outputType": "Process",
+    "outputType": "Tests",
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
@@ -40,36 +40,18 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [],
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "8f3b647e-1d09-46a1-a68c-406bbcdfcd37",
+        "dataVariationFilePath": ".variations\\browsers_Sheet1.json",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase.cs"
+      }
+    ],
     "modernBehavior": true
   },
-  "expressionLanguage": "VisualBasic",
-  "entryPoints": [
-    {
-      "filePath": "CodedAutomationUsingWorkflow.cs",
-      "uniqueId": "29e0f12e-db70-4c3b-b039-43a79aaaf3c7",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "CodedAutomationUsingCodedAutomation.cs",
-      "uniqueId": "576c3044-7fed-4c2b-a93a-9884241c34f0",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "BusinessProcess\\CodedResetAssetValue.cs",
-      "uniqueId": "358c3281-d555-4061-b89c-be1532e65ec2",
-      "input": [],
-      "output": []
-    },
-    {
-      "filePath": "ActivityWrapperExample\\CodedWrapperForModifyText.xaml",
-      "uniqueId": "f8cd74ca-64b6-4565-a2ad-f9beeafd6287",
-      "input": [],
-      "output": []
-    }
-  ],
+  "expressionLanguage": "CSharp",
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},

@@ -3,14 +3,14 @@
   "description": "Blank Process",
   "main": "GenerateQueue.cs",
   "dependencies": {
-    "UiPath.System.Activities": "[23.6.0-alpha.3678066]",
-    "UiPath.Testing.Activities": "[23.6.0-alpha.3708289]"
+    "UiPath.System.Activities": "[23.5.0-preview]",
+    "UiPath.Testing.Activities": "[23.5.0-preview]"
   },
   "webServices": [
     {
       "namespace": "QueueDefinitions",
       "serviceDocument": "Services\\QueueDefinitions.json",
-      "webDocumentUri": "https://staging.uipath.com/uipatulggiey/uipathDefault/orchestrator_/swagger/v16.0/swagger.json",
+      "webDocumentUri": "https://cloud.uipath.com/uipatulggiey/uipathDefault/orchestrator_/swagger/v16.0/swagger.json",
       "uniqueReference": "b2wyNFv7LGe3rdVZr7cL48iAeIlnflSYDwenUCcrybs="
     }
   ],

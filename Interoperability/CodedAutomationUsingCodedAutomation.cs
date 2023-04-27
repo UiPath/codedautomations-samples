@@ -19,28 +19,28 @@ using UiPath.UIAutomationNext.Enums;
 // Please delete these comments after you've read and acknowledged them. For more information, please visit the documentation over at https://docs.uipath.com/studio/lang-en/v2023.4/docs/coded-automations.
 namespace CodedWorkflowInteroperability
 {
-    public class CodedAutomationUsingCodedAutomation : CodedWorkflow
+  public class CodedAutomationUsingCodedAutomation : CodedWorkflow
+  {
+    [Workflow]
+    public void Execute()
     {
-        [Workflow]
-        public void Execute()
-        {
-            // Requirements:
-			// - Create an asset of type Text called MyAsset in the current folder.
-			
-            var result = RunWorkflow("BusinessProcess\\CodedResetAssetValue.cs", new Dictionary<string, object>() 
-			{
-				{"assetName", "MyAsset"},
-				{"assetValue", "hello world"}
-			});
-			
-			if ((bool)result["assetValueWasChanged"])
-			{
-				Log("Reset asset MyAsset, but it had a different value, previous value was " + result["assetValue"]);
-			}
-			else
-			{
-				Log("No reset was required on asset MyAsset, which had the expected value.");
-			}
-		}
+      // Requirements:
+      // - Create an asset of type Text called MyAsset in the current folder.
+
+      var result = RunWorkflow("BusinessProcess\\CodedResetAssetValue.cs", new Dictionary<string, object>()
+      {
+        {"assetName", "MyAsset"},
+        {"assetValue", "hello world"}
+      });
+
+      if ((bool)result["assetValueWasChanged"])
+      {
+        Log("Reset asset MyAsset, but it had a different value, previous value was " + result["assetValue"]);
+      }
+      else
+      {
+        Log("No reset was required on asset MyAsset, which had the expected value.");
+      }
     }
+  }
 }
