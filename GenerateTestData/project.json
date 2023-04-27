@@ -5,9 +5,9 @@
   "dependencies": {
     "UiPath.Excel.Activities": "[2.20.0-beta.3709801]",
     "UiPath.Mail.Activities": "[1.18.2]",
-    "UiPath.System.Activities": "[23.6.0-alpha.3793830]",
-    "UiPath.Testing.Activities": "[23.6.0-alpha.3788368]",
-    "UiPath.UIAutomation.Activities": "[23.6.0-alpha.3800623]"
+    "UiPath.System.Activities": "[23.5.0-preview]",
+    "UiPath.Testing.Activities": "[23.5.0-preview]",
+    "UiPath.UIAutomation.Activities": "[23.5.0-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
