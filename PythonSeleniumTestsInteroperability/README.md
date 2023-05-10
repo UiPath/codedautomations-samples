@@ -12,7 +12,7 @@ The approach showcases how you can use the coded automations framework in order 
 ## Requirements
 
 1. Install IronPython 3.4 from [here](https://github.com/IronLanguages/ironpython3/releases/download/v3.4.0/IronPython-3.4.0.msi) (requires Administrator rights).
-2. Add the path `C:\Program Files\IronPython 3.4` to your environment variables (see [here](https://linuxhint.com/add-directory-to-path-environment-variables-windows/) for a guide), or open an elevated command prompt, e.g. using WIN+X -> Powershell (Admin) and cd into C:\Program Files\IronPython\3.4. Non-elevated command prompts will result in errors when running the below commands.
+2. Add the path `C:\Program Files\IronPython 3.4` to your environment variables (see [here](https://linuxhint.com/add-directory-to-path-environment-variables-windows/) for a guide), or open an elevated command prompt, e.g. using WIN+X -> Powershell (Admin) and cd into `C:\Program Files\IronPython\3.4`. Non-elevated command prompts will result in errors when running the below commands.
 3. Run the below commands in the command prompt:
 - `ipy -X:Frames -m ensurepip`
 - `ipy -X:Frames -m pip install selenium`
