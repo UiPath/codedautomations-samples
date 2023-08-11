@@ -15,6 +15,7 @@ using UiPath.Testing.Enums;
 using UiPath.UIAutomationNext.API.Contracts;
 using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
+using SAP_WinGUI_Coded_Automation;
 
 // NOTICE: The Coded Automations feature is available as a preview feature and APIs may be subject to change. 
 //         No warranty or technical support is provided for this preview feature.
