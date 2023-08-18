@@ -20,9 +20,9 @@ using System.IO;
 //         No warranty or technical support is provided for this preview feature.
 //         Missing features or encountering bugs? Please click the feedback button in the top-right corner and let us know!
 // Please delete these comments after you've read and acknowledged them. For more information, please visit the documentation over at https://docs.uipath.com/studio/lang-en/v2023.4/docs/coded-automations.
-namespace CodedAutomationDemo
+namespace GenerateTestData
 {
-    public class GenerateTestData : CodedWorkflow
+    public class TestDataGenerator : CodedWorkflow
     {
         [Workflow]
         public void Execute()
@@ -59,7 +59,7 @@ namespace CodedAutomationDemo
 				string streetNumber = address["StreetNumber"];
 				int income = (int)testing.RandomNumber(10000,50000);			
 				
-				Console.WriteLine("Adding row: "+i);
+				Log("Adding row: "+i);
 				dataTable.Rows.Add(firstName, lastName, birtDate, country, zipCode, city, streetName, streetNumber, income);
 				
 			}
@@ -70,7 +70,7 @@ namespace CodedAutomationDemo
 		
 		public static void SaveTestData(DataTable dataTable, string filePath)
 		{
-		    StringBuilder sb = new StringBuilder();
+		    var sb = new StringBuilder();
 		
 		    // Write header row
 		    for (int i = 0; i < dataTable.Columns.Count; i++)

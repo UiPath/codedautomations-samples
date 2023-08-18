@@ -18,7 +18,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.AddQueueItem": [
@@ -39,7 +40,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.AddTransactionItem": [
@@ -60,7 +62,24 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.Core.Activities.BeginProcess": [
+      {
+        "Type": "process",
+        "Values": {
+          "name": {
+            "Value": "ProcessName",
+            "ValueSource": "Property"
+          },
+          "folderPath": {
+            "Value": "FolderPath",
+            "ValueSource": "Property"
+          }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.BulkAddQueueItems": [
@@ -81,7 +100,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.DeleteQueueItems": [
@@ -98,7 +118,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetJobs": [
@@ -115,7 +136,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetQueueItem": [
@@ -136,7 +158,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetQueueItems": [
@@ -157,7 +180,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetRobotAsset": [
@@ -178,7 +202,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.GetRobotCredential": [
@@ -199,7 +224,24 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
+      }
+    ],
+    "UiPath.Core.Activities.GetTransactionItem": [
+      {
+        "Type": "queue",
+        "Values": {
+          "name": {
+            "Value": "QueueType",
+            "ValueSource": "Property"
+          },
+          "folderPath": {
+            "Value": "FolderPath",
+            "ValueSource": "Property"
+          }
+        },
+        "DefaultValueSource": "Default"
       }
     ],
     "UiPath.Core.Activities.InvokeProcess": [
@@ -220,7 +262,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.PostponeTransactionItem": [
@@ -237,7 +280,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.QueueTrigger": [
@@ -272,7 +316,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.SetAsset": [
@@ -293,7 +338,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.SetCredential": [
@@ -314,7 +360,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.SetTransactionProgress": [
@@ -331,7 +378,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.SetTransactionStatus": [
@@ -348,7 +396,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.StartJob": [
@@ -369,7 +418,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.StopJob": [
@@ -386,7 +436,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.DeleteStorageFile": [
@@ -407,7 +458,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.DownloadStorageFile": [
@@ -428,7 +480,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.ListStorageFiles": [
@@ -449,7 +502,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.ReadStorageText": [
@@ -470,7 +524,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.UploadStorageFile": [
@@ -491,7 +546,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.Storage.WriteStorageText": [
@@ -512,7 +568,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.TimeTrigger": [
@@ -525,16 +582,17 @@
         },
         "Values": {},
         "Arguments": {
-          "CronExpression": {
-            "Value": "CronExpression",
-            "ValueSource": "Property"
-          },
           "TimeZone": {
             "Value": "TimeZone",
             "ValueSource": "Property"
+          },
+          "CronExpression": {
+            "Value": "CronExpression",
+            "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ],
     "UiPath.Core.Activities.WaitQueueItem": [
@@ -555,7 +613,8 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": []
+        "SubBindings": [],
+        "DefaultValueSource": "Property"
       }
     ]
   }

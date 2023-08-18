@@ -1,13 +1,13 @@
 {
   "name": "GenerateTestData",
+  "projectId": "d8b4ca09-e5bc-477f-8dc2-6312e50148dd",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.20.0-beta.3709801]",
-    "UiPath.Mail.Activities": "[1.18.2]",
-    "UiPath.System.Activities": "[23.5.0-preview]",
-    "UiPath.Testing.Activities": "[23.5.0-preview]",
-    "UiPath.UIAutomation.Activities": "[23.5.0-preview]"
+    "UiPath.CodedWorkflows": "[23.8.0-preview]",
+    "UiPath.System.Activities": "[23.6.0-preview]",
+    "UiPath.Testing.Activities": "[23.6.0-preview]",
+    "UiPath.UIAutomation.Activities": "[23.6.2-preview]"
   },
   "webServices": [],
   "entitiesStores": [],

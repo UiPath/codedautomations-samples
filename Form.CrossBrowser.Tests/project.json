@@ -1,11 +1,13 @@
 {
   "name": "Form.CrossBrowser.Tests",
+  "projectId": "dcf4ecb4-2871-489d-a79f-c4d9d78bd396",
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[23.5.0-preview]",
-    "UiPath.Testing.Activities": "[23.5.0-preview]",
-    "UiPath.UIAutomation.Activities": "[23.5.0-preview]"
+    "UiPath.CodedWorkflows": "[23.8.0-preview]",
+    "UiPath.System.Activities": "[23.6.0-preview]",
+    "UiPath.Testing.Activities": "[23.6.0-preview]",
+    "UiPath.UIAutomation.Activities": "[23.6.2-preview]"
   },
   "webServices": [],
   "entitiesStores": [],

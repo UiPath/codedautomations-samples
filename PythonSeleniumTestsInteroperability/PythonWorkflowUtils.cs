@@ -8,7 +8,7 @@ using UiPath.CodedWorkflows;
 // Missing features or encountering bugs? Please click the feedback button in the top-right corner and let us know!
 // For more information, please visit the documentation over at https://docs.uipath.com/studio/docs/coded-workflows.
 // Feel free to delete these comments after you've read and acknowledged them.
-namespace BlankProcess32
+namespace PythonSeleniumTestsInteroperability
 {
     public class PythonWorkflowUtils
     {

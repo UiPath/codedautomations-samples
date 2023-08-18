@@ -1,18 +1,20 @@
 {
   "name": "PythonSeleniumTestsInteroperability",
+  "projectId": "b38f20c7-56f3-4725-ac58-8a6108c4cfd6",
   "description": "",
   "main": "CodedTestCase_SeleniumTest.cs",
   "dependencies": {
     "IronPython": "[3.4.0]",
-    "UiPath.System.Activities": "[23.5.0-preview]",
-    "UiPath.Testing.Activities": "[23.5.0-preview]",
-    "UiPath.UIAutomation.Activities": "[23.5.0-preview]"
+    "UiPath.CodedWorkflows": "[23.8.0-preview]",
+    "UiPath.System.Activities": "[23.6.0-preview]",
+    "UiPath.Testing.Activities": "[23.6.0-preview]",
+    "UiPath.UIAutomation.Activities": "[23.6.2-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.0.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.145434881",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

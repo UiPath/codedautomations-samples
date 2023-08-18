@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using UiPath.Activities.Contracts;
 using UiPath.CodedWorkflows;
 
-namespace BlankProcess32
+namespace PythonSeleniumTestsInteroperability
 {
     public class TestCase_SeleniumTest : PythonCodedWorkflowWrapper
     {

@@ -1,16 +1,18 @@
 {
   "name": "RandomQueueGenerator",
+  "projectId": "5b2582e7-a567-416b-ab7d-089df80dfe02",
   "description": "Blank Process",
   "main": "GenerateQueue.cs",
   "dependencies": {
-    "UiPath.System.Activities": "[23.5.0-preview]",
-    "UiPath.Testing.Activities": "[23.5.0-preview]"
+    "UiPath.CodedWorkflows": "23.8.0-preview",
+    "UiPath.System.Activities": "[23.6.0-preview]",
+    "UiPath.Testing.Activities": "[23.6.0-preview]"
   },
   "webServices": [
     {
       "namespace": "QueueDefinitions",
       "serviceDocument": "Services\\QueueDefinitions.json",
-      "webDocumentUri": "https://cloud.uipath.com/uipatulggiey/uipathDefault/orchestrator_/swagger/v16.0/swagger.json",
+      "webDocumentUri": "https://staging.uipath.com/uipatulggiey/uipathDefault/orchestrator_/swagger/v16.0/swagger.json",
       "uniqueReference": "b2wyNFv7LGe3rdVZr7cL48iAeIlnflSYDwenUCcrybs="
     }
   ],

@@ -40,22 +40,5 @@ namespace RandomQueueGenerator
         system.AddQueueItem(queueName, null, DateTime.UtcNow, data, DateTime.UtcNow, QueueItemPriority.Normal, i.ToString(), 15000);
       });
     }
-
-    private HttpClient BuildClient()
-    {
-      // Uses a sync implementation for simplification, can be converted to async/await.
-      var orchestratorUrl = executorRuntime.AccessProvider.GetResourceUrl("Orchestrator").Result;
-      var orchestratorToken = executorRuntime.AccessProvider.GetAccessToken("Orchestrator", true).Result;
-
-      var client = new HttpClient();
-      client.DefaultRequestHeaders.Add("Authorization", "Bearer " + orchestratorToken);
-
-      foreach (var header in workflowRuntime.OrchestratorSettings.GetHeaders())
-      {
-        client.DefaultRequestHeaders.Add(header.Key, header.Value);
-      }
-
-      return client;
-    }
   }
 }
