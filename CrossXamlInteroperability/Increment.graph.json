@@ -1,0 +1,84 @@
+{
+  "Workflows": {
+    "Increment_1": {
+      "Variables": {
+        "in_arg": {
+          "Name": "in_arg",
+          "Type": "System.Int32",
+          "DefaultValue": null,
+          "Annotation": null,
+          "AdvancedRequest": {
+            "Requests": {}
+          }
+        },
+        "out_arg": {
+          "Name": "out_arg",
+          "Type": "System.Int32",
+          "DefaultValue": null,
+          "Annotation": null,
+          "AdvancedRequest": {
+            "Requests": {}
+          }
+        }
+      },
+      "InputArguments": [
+        "in_arg"
+      ],
+      "OutputArguments": [
+        "out_arg"
+      ],
+      "InputOutputArguments": [],
+      "DisplayName": "Increment_1",
+      "FullPath": "C:\\Users\\alberto.carp\\Documents\\UiPath\\CrossXamlInteroperability\\Increment.xaml",
+      "InvokedBy": "",
+      "StartNode": "Increment_1:InitialVirtualNode_1",
+      "Arguments": [
+        "in_arg",
+        "out_arg"
+      ]
+    }
+  },
+  "Nodes": {
+    "Increment_1:InitialVirtualNode_1": {
+      "WorkflowName": "Increment_1",
+      "Name": "Increment_1:InitialVirtualNode_1",
+      "Expression": null,
+      "Transitions": [
+        {
+          "Source": "Increment_1:InitialVirtualNode_1",
+          "Destination": "Increment_1:Assign_2",
+          "Value": "True"
+        }
+      ],
+      "Annotation": null,
+      "AdditionalInformation": {},
+      "RequiresPostProcessing": false
+    },
+    "Increment_1:Assign_2": {
+      "WorkflowName": "Increment_1",
+      "Name": "Increment_1:Assign_2",
+      "Expression": "out_arg = in_arg + 1",
+      "Transitions": [
+        {
+          "Source": "Increment_1:Assign_2",
+          "Destination": "Increment_1:Virtual_Sequence_End_3",
+          "Value": "True"
+        }
+      ],
+      "Annotation": null,
+      "AdditionalInformation": {},
+      "RequiresPostProcessing": false
+    },
+    "Increment_1:Virtual_Sequence_End_3": {
+      "WorkflowName": "Increment_1",
+      "Name": "Increment_1:Virtual_Sequence_End_3",
+      "Expression": null,
+      "Transitions": [],
+      "Annotation": null,
+      "AdditionalInformation": {},
+      "RequiresPostProcessing": false
+    }
+  },
+  "StartNode": "Increment_1:InitialVirtualNode_1",
+  "EntryPoint": "Increment_1"
+}
