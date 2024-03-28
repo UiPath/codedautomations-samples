@@ -14,7 +14,7 @@ using UiPath.UIAutomationNext.API.Contracts;
 using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
 
-namespace CodedDemo
+namespace CodedExcelDemo
 {
     public class UseExcelFile_PivotTable : CodedWorkflow
     {
@@ -47,10 +47,10 @@ namespace CodedDemo
                 w.Table["Table1"].CreatePivotTable("myNewPT", w.Sheet["newPivotSheet"], ptDesc);
                 
                 //clear pivot table filter on "Column3"
-                w.Sheet["newSheet"].PivotTable["newPivot"].FilterPivotTable("Column3", default, true);
+                w.Sheet["newPivotSheet"].PivotTable["myNewPT"].FilterPivotTable("Column3", default, true);
                 
                 //set the list of values for "Column3"
-                w.Sheet["newSheet"].PivotTable["newPivot"].FilterPivotTable("Column3", new string[]{"cc1", "cc2"}, false);
+                w.Sheet["newPivotSheet"].PivotTable["myNewPT"].FilterPivotTable("Column3", new string[]{"cc1", "cc2"}, false);
             }
             
         }

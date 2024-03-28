@@ -4,7 +4,7 @@
   "description": "Excel coded automation samples",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.23.3-alpha.5448396]",
+    "UiPath.Excel.Activities": "[2.23.3-alpha.5435483]",
     "UiPath.Mail.Activities": "[1.23.0-alpha.5436700]",
     "UiPath.System.Activities": "[24.4.0-alpha.5449577]",
     "UiPath.Testing.Activities": "[24.2.0-beta.5157561]",

@@ -13,7 +13,7 @@ using UiPath.Excel.Activities.API;
 using UiPath.Excel.Activities;
 using UiPath.Excel.Activities.API.Models;
 
-namespace CodedDemo
+namespace CodedExcelDemo
 {
     public class Excel2_UseFile : CodedWorkflow
     {
