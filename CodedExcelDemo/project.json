@@ -1,0 +1,68 @@
+{
+  "name": "CodedExcelDemo",
+  "projectId": "503092be-3fdc-4be5-abfc-2e1b6f2a7d7a",
+  "description": "Excel coded automation samples",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.23.3-alpha.5448396]",
+    "UiPath.Mail.Activities": "[1.23.0-alpha.5436700]",
+    "UiPath.System.Activities": "[24.4.0-alpha.5449577]",
+    "UiPath.Testing.Activities": "[24.2.0-beta.5157561]",
+    "UiPath.UIAutomation.Activities": "[24.4.0-alpha.5584568]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.4.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "005bce6e-ae44-47ef-94fa-bf1c6843367d",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "UseExcelFile_ExecuteMacro.cs",
+      "uniqueId": "a7c2c1ca-ccda-4f3d-8345-a9c2c96ff9a2",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
