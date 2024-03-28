@@ -5,3 +5,4 @@
 - `RandomQueueGenerator` - uses the Orchestrator API to create a new queue and fills it with queue items using random data
 - `GenerateTestData` - an example on how to use testing activities to generate synthetic test data
 - `SAP_WinGUI_Coded_Automation_Project` - SAP WinGUI automation example using coded automation
+- `CodedExcelDemo` - an example on how to use Excel coded automations
