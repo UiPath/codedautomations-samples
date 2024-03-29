@@ -14,7 +14,7 @@ using UiPath.UIAutomationNext.API.Models;
 using UiPath.UIAutomationNext.Enums;
 using System.Linq;
 
-namespace CodedDemo
+namespace CodedExcelDemo
 {
     public class UseExcelFile_Filter : CodedWorkflow
     {
