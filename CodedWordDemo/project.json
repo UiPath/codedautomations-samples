@@ -1,0 +1,87 @@
+{
+  "name": "CodedWordDemo",
+  "projectId": "b1f9c210-b49f-489d-8428-557b5d5bad2e",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.23.4-beta.6017090]",
+    "UiPath.Mail.Activities": "[1.23.1]",
+    "UiPath.System.Activities": "[24.5.0-preview]",
+    "UiPath.Testing.Activities": "[24.10.0-preview]",
+    "UiPath.UIAutomation.Activities": "[24.10.0-preview]",
+    "UiPath.Word.Activities": "[1.20.0-alpha.6268437]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.10.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "10adfb40-23c1-4bb9-9714-63d37cbb8ef6",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "UseWordDocument_Basic.cs",
+      "uniqueId": "0019d0c5-c649-4d39-9562-96084c0d7ce3",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "UseWordDocument_WithOptions.cs",
+      "uniqueId": "8d97f9fc-9361-4686-b5c2-e752f7b26b0c",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "UseWordDocument_AddPictureOptions.cs",
+      "uniqueId": "abd1b055-237b-4595-9960-76a812a737ae",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "UseWordDocument_InsertDataTable.cs",
+      "uniqueId": "c0753c38-9b77-4e6e-bdf3-036494660d0c",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
