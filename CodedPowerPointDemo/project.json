@@ -1,0 +1,105 @@
+{
+  "name": "PowerPointCoded",
+  "projectId": "9706ad05-bf1f-4ef3-8cad-dfa1e1d5dfd2",
+  "description": "Blank Process",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.23.3-alpha.5359193]",
+    "UiPath.Mail.Activities": "[1.22.1]",
+    "UiPath.Presentations.Activities": "[1.14.0-preview]",
+    "UiPath.System.Activities": "[24.2.0-preview]",
+    "UiPath.Testing.Activities": "[23.10.0]",
+    "UiPath.UIAutomation.Activities": "[23.10.7]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.4.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "bff2f7b4-7208-4e15-95d7-066e03d9a08f",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "ReplaceTextInPresentation.cs",
+      "uniqueId": "7f1bbf3d-dba4-4e17-9405-1646d7aea518",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "AddNewSlide.cs",
+      "uniqueId": "366b610f-8e8a-42e3-a314-931255c5106b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "AddText2Slide.cs",
+      "uniqueId": "f4db610c-e5fa-4cad-8f84-d221341181a9",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "FormatSlideContent.cs",
+      "uniqueId": "c9c0a7f0-4b81-4b68-9653-44f9f01ac7c2",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "DeleteSlide.cs",
+      "uniqueId": "101b70d7-134c-4568-a688-8539fabf4983",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "AddFile2Slide.cs",
+      "uniqueId": "e9091977-b0c1-463c-9441-6784e8e890c5",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "AddImageOrVideo2Slide.cs",
+      "uniqueId": "45b13a10-1150-4481-9787-3bf07c133cbb",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
