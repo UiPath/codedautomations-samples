@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GenerateTwoFactorAuthenticationCode.Core</name>
+    </assembly>
+    <members>
+        <member name="M:GenerateTwoFactorAuthenticationCode.WorkflowRunnerService.Workflow(System.String)">
+            <summary>
+            Invokes the Workflow.cs
+            </summary>
+        </member>
+        <member name="M:GenerateTwoFactorAuthenticationCode.WorkflowRunnerService.Workflow(System.String,System.Boolean)">
+            <summary>
+            Invokes the Workflow.cs
+            </summary>
+            <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
+        </member>
+    </members>
+</doc>
