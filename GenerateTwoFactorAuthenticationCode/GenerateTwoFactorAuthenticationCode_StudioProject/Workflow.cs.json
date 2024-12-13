@@ -1,0 +1,33 @@
+{
+  "DisplayName": "Get 2FA token",
+  "Tooltip": "It generates the token for a Two-Factor Authentication system, based on the Secret Key generated when you enroll a device in the program. The algorithm generates a new code every 30 seconds.",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "secretKey",
+      "DisplayName": "Secret key",
+      "Category": null,
+      "Tooltip": "Secret key corresponding to the service for which you want to fetch the one time token.",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "Output",
+      "DisplayName": "Token",
+      "Category": null,
+      "Tooltip": "The one time two factor authentication token.",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}
