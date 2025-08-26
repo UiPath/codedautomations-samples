@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Custom",
+  "Type": "Screen",
+  "Id": "YDW4FN0rrk68KywrrNuVXg",
+  "Reference": "xRyh2Bev1ECs8QRhPsGX0w/YDW4FN0rrk68KywrrNuVXg",
+  "ParentRef": "xRyh2Bev1ECs8QRhPsGX0w/kD6nQnI0_0S-gTm_dFbmvA",
+  "Created": "2025-07-28T15:23:51.2516181Z",
+  "Updated": "2025-07-28T15:33:26.2548617Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

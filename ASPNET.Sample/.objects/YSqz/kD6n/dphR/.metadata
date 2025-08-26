@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Desktop",
+  "Type": "Screen",
+  "Id": "dphRDM7MmECj6JEP9EoK8A",
+  "Reference": "xRyh2Bev1ECs8QRhPsGX0w/dphRDM7MmECj6JEP9EoK8A",
+  "ParentRef": "xRyh2Bev1ECs8QRhPsGX0w/kD6nQnI0_0S-gTm_dFbmvA",
+  "Created": "2025-07-28T15:14:57.5027627Z",
+  "Updated": "2025-07-28T15:15:35.3975585Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

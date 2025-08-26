@@ -1,0 +1,1945 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Main.cs",
+      "uniqueId": "1e7010e9-a130-4b34-b6d7-c2cb2db1f29a",
+      "type": "process",
+      "output": {
+        "type": "object",
+        "properties": {
+          "Output": {
+            "type": "object",
+            "properties": {
+              "Id": {
+                "$ref": "#/$defs/integer"
+              },
+              "Exception": {
+                "type": "object",
+                "properties": {
+                  "TargetSite": {
+                    "$ref": "#/$defs/methodBase"
+                  },
+                  "Data": {
+                    "$ref": "#/$defs/iDictionary"
+                  },
+                  "InnerException": {
+                    "$ref": "#/$defs/exception"
+                  },
+                  "HelpLink": {
+                    "type": "string"
+                  },
+                  "Source": {
+                    "type": "string"
+                  },
+                  "HResult": {
+                    "$ref": "#/$defs/integer1"
+                  },
+                  "StackTrace": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "InnerExceptions": {
+                    "$ref": "#/$defs/readOnlyCollectionOfException"
+                  },
+                  "Message": {
+                    "$ref": "#/$defs/string"
+                  }
+                },
+                "readOnly": true
+              },
+              "Status": {
+                "enum": [
+                  "Created",
+                  "WaitingForActivation",
+                  "WaitingToRun",
+                  "Running",
+                  "WaitingForChildrenToComplete",
+                  "RanToCompletion",
+                  "Canceled",
+                  "Faulted"
+                ],
+                "readOnly": true
+              },
+              "IsCanceled": {
+                "$ref": "#/$defs/boolean"
+              },
+              "IsCompleted": {
+                "$ref": "#/$defs/boolean"
+              },
+              "IsCompletedSuccessfully": {
+                "$ref": "#/$defs/boolean"
+              },
+              "CreationOptions": {
+                "enum": [
+                  "None",
+                  "PreferFairness",
+                  "LongRunning",
+                  "AttachedToParent",
+                  "DenyChildAttach",
+                  "HideScheduler",
+                  "RunContinuationsAsynchronously"
+                ],
+                "readOnly": true
+              },
+              "AsyncState": {
+                "$ref": "#/$defs/object"
+              },
+              "IsFaulted": {
+                "$ref": "#/$defs/boolean"
+              }
+            },
+            "$defs": {
+              "integer": {
+                "type": "integer",
+                "minimum": -2147483648,
+                "maximum": 2147483647,
+                "readOnly": true
+              },
+              "integer1": {
+                "type": "integer",
+                "minimum": -2147483648,
+                "maximum": 2147483647
+              },
+              "methodBase": {
+                "type": "object",
+                "properties": {
+                  "MemberType": {
+                    "$ref": "#/$defs/memberTypes"
+                  },
+                  "Name": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "DeclaringType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "ReflectedType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "Module": {
+                    "$ref": "#/$defs/module"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "IsCollectible": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MetadataToken": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "Attributes": {
+                    "$ref": "#/$defs/methodAttributes"
+                  },
+                  "MethodImplementationFlags": {
+                    "$ref": "#/$defs/methodImplAttributes"
+                  },
+                  "CallingConvention": {
+                    "$ref": "#/$defs/callingConventions"
+                  },
+                  "IsAbstract": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsConstructor": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFinal": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsHideBySig": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSpecialName": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsStatic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsVirtual": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamily": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamilyAndAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamilyOrAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPrivate": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsConstructedGenericMethod": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericMethod": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericMethodDefinition": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "ContainsGenericParameters": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MethodHandle": {
+                    "$ref": "#/$defs/runtimeMethodHandle"
+                  },
+                  "IsSecurityCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecuritySafeCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecurityTransparent": {
+                    "$ref": "#/$defs/boolean"
+                  }
+                },
+                "readOnly": true
+              },
+              "memberTypes": {
+                "enum": [
+                  "Constructor",
+                  "Event",
+                  "Field",
+                  "Method",
+                  "Property",
+                  "TypeInfo",
+                  "Custom",
+                  "NestedType",
+                  "All"
+                ],
+                "readOnly": true
+              },
+              "string": {
+                "type": "string",
+                "readOnly": true,
+                "deprecated": true
+              },
+              "type": {
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "IsCollectible": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MetadataToken": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "IsInterface": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MemberType": {
+                    "$ref": "#/$defs/memberTypes"
+                  },
+                  "Namespace": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "AssemblyQualifiedName": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "FullName": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "Assembly": {
+                    "$ref": "#/$defs/assembly"
+                  },
+                  "Module": {
+                    "$ref": "#/$defs/module"
+                  },
+                  "IsNested": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "DeclaringType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "DeclaringMethod": {
+                    "$ref": "#/$defs/methodBase"
+                  },
+                  "ReflectedType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "UnderlyingSystemType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "IsTypeDefinition": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsArray": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsByRef": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPointer": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsConstructedGenericType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericParameter": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericTypeParameter": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericMethodParameter": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericTypeDefinition": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSZArray": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsVariableBoundArray": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsByRefLike": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFunctionPointer": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsUnmanagedFunctionPointer": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "HasElementType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "GenericTypeArguments": {
+                    "$ref": "#/$defs/arrayOfType"
+                  },
+                  "GenericParameterPosition": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "GenericParameterAttributes": {
+                    "$ref": "#/$defs/genericParameterAttributes"
+                  },
+                  "Attributes": {
+                    "$ref": "#/$defs/typeAttributes"
+                  },
+                  "IsAbstract": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsImport": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSealed": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSpecialName": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsClass": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedFamANDAssem": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedFamily": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedFamORAssem": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedPrivate": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNotPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAutoLayout": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsExplicitLayout": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsLayoutSequential": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAnsiClass": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAutoClass": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsUnicodeClass": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsCOMObject": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsContextful": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsEnum": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsMarshalByRef": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPrimitive": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsValueType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSignatureType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecurityCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecuritySafeCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecurityTransparent": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "StructLayoutAttribute": {
+                    "$ref": "#/$defs/structLayoutAttribute"
+                  },
+                  "TypeInitializer": {
+                    "$ref": "#/$defs/constructorInfo"
+                  },
+                  "TypeHandle": {
+                    "$ref": "#/$defs/runtimeTypeHandle"
+                  },
+                  "GUID": {
+                    "$ref": "#/$defs/guid"
+                  },
+                  "BaseType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "IsSerializable": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "ContainsGenericParameters": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsVisible": {
+                    "$ref": "#/$defs/boolean"
+                  }
+                },
+                "readOnly": true
+              },
+              "type1": {
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "IsCollectible": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MetadataToken": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "IsInterface": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MemberType": {
+                    "$ref": "#/$defs/memberTypes"
+                  },
+                  "Namespace": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "AssemblyQualifiedName": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "FullName": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "Assembly": {
+                    "$ref": "#/$defs/assembly"
+                  },
+                  "Module": {
+                    "$ref": "#/$defs/module"
+                  },
+                  "IsNested": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "DeclaringType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "DeclaringMethod": {
+                    "$ref": "#/$defs/methodBase"
+                  },
+                  "ReflectedType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "UnderlyingSystemType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "IsTypeDefinition": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsArray": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsByRef": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPointer": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsConstructedGenericType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericParameter": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericTypeParameter": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericMethodParameter": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericTypeDefinition": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSZArray": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsVariableBoundArray": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsByRefLike": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFunctionPointer": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsUnmanagedFunctionPointer": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "HasElementType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "GenericTypeArguments": {
+                    "$ref": "#/$defs/arrayOfType"
+                  },
+                  "GenericParameterPosition": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "GenericParameterAttributes": {
+                    "$ref": "#/$defs/genericParameterAttributes"
+                  },
+                  "Attributes": {
+                    "$ref": "#/$defs/typeAttributes"
+                  },
+                  "IsAbstract": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsImport": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSealed": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSpecialName": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsClass": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedFamANDAssem": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedFamily": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedFamORAssem": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedPrivate": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNestedPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsNotPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAutoLayout": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsExplicitLayout": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsLayoutSequential": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAnsiClass": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAutoClass": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsUnicodeClass": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsCOMObject": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsContextful": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsEnum": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsMarshalByRef": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPrimitive": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsValueType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSignatureType": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecurityCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecuritySafeCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecurityTransparent": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "StructLayoutAttribute": {
+                    "$ref": "#/$defs/structLayoutAttribute"
+                  },
+                  "TypeInitializer": {
+                    "$ref": "#/$defs/constructorInfo"
+                  },
+                  "TypeHandle": {
+                    "$ref": "#/$defs/runtimeTypeHandle"
+                  },
+                  "GUID": {
+                    "$ref": "#/$defs/guid"
+                  },
+                  "BaseType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "IsSerializable": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "ContainsGenericParameters": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsVisible": {
+                    "$ref": "#/$defs/boolean"
+                  }
+                }
+              },
+              "arrayOfCustomAttributeData": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "AttributeType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "Constructor": {
+                      "$ref": "#/$defs/constructorInfo"
+                    },
+                    "ConstructorArguments": {
+                      "$ref": "#/$defs/iListOfCustomAttributeTypedArgument"
+                    },
+                    "NamedArguments": {
+                      "$ref": "#/$defs/iListOfCustomAttributeNamedArgument"
+                    }
+                  },
+                  "readOnly": true
+                },
+                "readOnly": true
+              },
+              "constructorInfo": {
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "DeclaringType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "ReflectedType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "Module": {
+                    "$ref": "#/$defs/module"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "IsCollectible": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MetadataToken": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "Attributes": {
+                    "$ref": "#/$defs/methodAttributes"
+                  },
+                  "MethodImplementationFlags": {
+                    "$ref": "#/$defs/methodImplAttributes"
+                  },
+                  "CallingConvention": {
+                    "$ref": "#/$defs/callingConventions"
+                  },
+                  "IsAbstract": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsConstructor": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFinal": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsHideBySig": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSpecialName": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsStatic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsVirtual": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamily": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamilyAndAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamilyOrAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPrivate": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsConstructedGenericMethod": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericMethod": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericMethodDefinition": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "ContainsGenericParameters": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MethodHandle": {
+                    "$ref": "#/$defs/runtimeMethodHandle"
+                  },
+                  "IsSecurityCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecuritySafeCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecurityTransparent": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MemberType": {
+                    "$ref": "#/$defs/memberTypes"
+                  }
+                },
+                "readOnly": true
+              },
+              "module": {
+                "type": "object",
+                "properties": {
+                  "Assembly": {
+                    "$ref": "#/$defs/assembly"
+                  },
+                  "FullyQualifiedName": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "Name": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "MDStreamVersion": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "ModuleVersionId": {
+                    "$ref": "#/$defs/guid"
+                  },
+                  "ScopeName": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "ModuleHandle": {
+                    "$ref": "#/$defs/moduleHandle"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "MetadataToken": {
+                    "$ref": "#/$defs/integer"
+                  }
+                },
+                "readOnly": true
+              },
+              "assembly": {
+                "type": "object",
+                "properties": {
+                  "DefinedTypes": {
+                    "$ref": "#/$defs/arrayOfTypeInfo"
+                  },
+                  "ExportedTypes": {
+                    "$ref": "#/$defs/arrayOfType1"
+                  },
+                  "CodeBase": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "EntryPoint": {
+                    "$ref": "#/$defs/methodInfo"
+                  },
+                  "FullName": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "ImageRuntimeVersion": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "IsDynamic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "Location": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "ReflectionOnly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsCollectible": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFullyTrusted": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "EscapedCodeBase": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "ManifestModule": {
+                    "$ref": "#/$defs/module"
+                  },
+                  "Modules": {
+                    "$ref": "#/$defs/arrayOfModule"
+                  },
+                  "GlobalAssemblyCache": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "HostContext": {
+                    "$ref": "#/$defs/integer2"
+                  },
+                  "SecurityRuleSet": {
+                    "$ref": "#/$defs/securityRuleSet"
+                  }
+                },
+                "readOnly": true
+              },
+              "arrayOfTypeInfo": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Name": {
+                      "$ref": "#/$defs/string"
+                    },
+                    "CustomAttributes": {
+                      "$ref": "#/$defs/arrayOfCustomAttributeData"
+                    },
+                    "IsCollectible": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "MetadataToken": {
+                      "$ref": "#/$defs/integer"
+                    },
+                    "IsInterface": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "MemberType": {
+                      "$ref": "#/$defs/memberTypes"
+                    },
+                    "Namespace": {
+                      "$ref": "#/$defs/string"
+                    },
+                    "AssemblyQualifiedName": {
+                      "$ref": "#/$defs/string"
+                    },
+                    "FullName": {
+                      "$ref": "#/$defs/string"
+                    },
+                    "Assembly": {
+                      "$ref": "#/$defs/assembly"
+                    },
+                    "Module": {
+                      "$ref": "#/$defs/module"
+                    },
+                    "IsNested": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "DeclaringType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "DeclaringMethod": {
+                      "$ref": "#/$defs/methodBase"
+                    },
+                    "ReflectedType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "UnderlyingSystemType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "IsTypeDefinition": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsArray": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsByRef": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsPointer": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsConstructedGenericType": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsGenericParameter": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsGenericTypeParameter": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsGenericMethodParameter": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsGenericType": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsGenericTypeDefinition": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSZArray": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsVariableBoundArray": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsByRefLike": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsFunctionPointer": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsUnmanagedFunctionPointer": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "HasElementType": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "GenericTypeArguments": {
+                      "$ref": "#/$defs/arrayOfType"
+                    },
+                    "GenericParameterPosition": {
+                      "$ref": "#/$defs/integer"
+                    },
+                    "GenericParameterAttributes": {
+                      "$ref": "#/$defs/genericParameterAttributes"
+                    },
+                    "Attributes": {
+                      "$ref": "#/$defs/typeAttributes"
+                    },
+                    "IsAbstract": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsImport": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSealed": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSpecialName": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsClass": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsNestedAssembly": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsNestedFamANDAssem": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsNestedFamily": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsNestedFamORAssem": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsNestedPrivate": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsNestedPublic": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsNotPublic": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsPublic": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsAutoLayout": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsExplicitLayout": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsLayoutSequential": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsAnsiClass": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsAutoClass": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsUnicodeClass": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsCOMObject": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsContextful": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsEnum": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsMarshalByRef": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsPrimitive": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsValueType": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSignatureType": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSecurityCritical": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSecuritySafeCritical": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSecurityTransparent": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "StructLayoutAttribute": {
+                      "$ref": "#/$defs/structLayoutAttribute"
+                    },
+                    "TypeInitializer": {
+                      "$ref": "#/$defs/constructorInfo"
+                    },
+                    "TypeHandle": {
+                      "$ref": "#/$defs/runtimeTypeHandle"
+                    },
+                    "GUID": {
+                      "$ref": "#/$defs/guid"
+                    },
+                    "BaseType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "IsSerializable": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "ContainsGenericParameters": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsVisible": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "GenericTypeParameters": {
+                      "$ref": "#/$defs/arrayOfType"
+                    },
+                    "DeclaredConstructors": {
+                      "$ref": "#/$defs/arrayOfConstructorInfo"
+                    },
+                    "DeclaredEvents": {
+                      "$ref": "#/$defs/arrayOfEventInfo"
+                    },
+                    "DeclaredFields": {
+                      "$ref": "#/$defs/arrayOfFieldInfo"
+                    },
+                    "DeclaredMembers": {
+                      "$ref": "#/$defs/arrayOfMemberInfo"
+                    },
+                    "DeclaredMethods": {
+                      "$ref": "#/$defs/arrayOfMethodInfo"
+                    },
+                    "DeclaredNestedTypes": {
+                      "$ref": "#/$defs/arrayOfTypeInfo"
+                    },
+                    "DeclaredProperties": {
+                      "$ref": "#/$defs/arrayOfPropertyInfo"
+                    },
+                    "ImplementedInterfaces": {
+                      "$ref": "#/$defs/arrayOfType1"
+                    }
+                  },
+                  "readOnly": true
+                },
+                "readOnly": true
+              },
+              "boolean": {
+                "type": "boolean",
+                "readOnly": true,
+                "deprecated": true
+              },
+              "arrayOfType": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/type"
+                },
+                "readOnly": true
+              },
+              "genericParameterAttributes": {
+                "enum": [
+                  "None",
+                  "Covariant",
+                  "Contravariant",
+                  "VarianceMask",
+                  "ReferenceTypeConstraint",
+                  "NotNullableValueTypeConstraint",
+                  "DefaultConstructorConstraint",
+                  "SpecialConstraintMask"
+                ],
+                "readOnly": true
+              },
+              "typeAttributes": {
+                "enum": [
+                  "NotPublic",
+                  "AutoLayout",
+                  "AnsiClass",
+                  "Class",
+                  "Public",
+                  "NestedPublic",
+                  "NestedPrivate",
+                  "NestedFamily",
+                  "NestedAssembly",
+                  "NestedFamANDAssem",
+                  "VisibilityMask",
+                  "NestedFamORAssem",
+                  "SequentialLayout",
+                  "ExplicitLayout",
+                  "LayoutMask",
+                  "Interface",
+                  "ClassSemanticsMask",
+                  "Abstract",
+                  "Sealed",
+                  "SpecialName",
+                  "RTSpecialName",
+                  "Import",
+                  "Serializable",
+                  "WindowsRuntime",
+                  "UnicodeClass",
+                  "AutoClass",
+                  "StringFormatMask",
+                  "CustomFormatClass",
+                  "HasSecurity",
+                  "ReservedMask",
+                  "BeforeFieldInit",
+                  "CustomFormatMask"
+                ],
+                "readOnly": true
+              },
+              "structLayoutAttribute": {
+                "type": "object",
+                "properties": {
+                  "TypeId": {
+                    "$ref": "#/$defs/object"
+                  },
+                  "Pack": {
+                    "$ref": "#/$defs/integer1"
+                  },
+                  "Size": {
+                    "$ref": "#/$defs/integer1"
+                  },
+                  "CharSet": {
+                    "enum": [
+                      "None",
+                      "Ansi",
+                      "Unicode",
+                      "Auto"
+                    ]
+                  },
+                  "Value": {
+                    "$ref": "#/$defs/layoutKind"
+                  }
+                },
+                "readOnly": true
+              },
+              "object": {
+                "type": "object",
+                "readOnly": true
+              },
+              "layoutKind": {
+                "enum": [
+                  "Sequential",
+                  "Explicit",
+                  "Auto"
+                ],
+                "readOnly": true
+              },
+              "runtimeTypeHandle": {
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "$ref": "#/$defs/intPtr"
+                  }
+                },
+                "readOnly": true
+              },
+              "intPtr": {
+                "type": "object",
+                "readOnly": true
+              },
+              "guid": {
+                "type": "string",
+                "format": "uuid",
+                "readOnly": true
+              },
+              "arrayOfConstructorInfo": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/constructorInfo"
+                },
+                "readOnly": true
+              },
+              "arrayOfEventInfo": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Name": {
+                      "$ref": "#/$defs/string"
+                    },
+                    "DeclaringType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "ReflectedType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "Module": {
+                      "$ref": "#/$defs/module"
+                    },
+                    "CustomAttributes": {
+                      "$ref": "#/$defs/arrayOfCustomAttributeData"
+                    },
+                    "IsCollectible": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "MetadataToken": {
+                      "$ref": "#/$defs/integer"
+                    },
+                    "MemberType": {
+                      "$ref": "#/$defs/memberTypes"
+                    },
+                    "Attributes": {
+                      "$ref": "#/$defs/eventAttributes"
+                    },
+                    "IsSpecialName": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "AddMethod": {
+                      "$ref": "#/$defs/methodInfo"
+                    },
+                    "RemoveMethod": {
+                      "$ref": "#/$defs/methodInfo"
+                    },
+                    "RaiseMethod": {
+                      "$ref": "#/$defs/methodInfo"
+                    },
+                    "IsMulticast": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "EventHandlerType": {
+                      "$ref": "#/$defs/type"
+                    }
+                  },
+                  "readOnly": true
+                },
+                "readOnly": true
+              },
+              "eventAttributes": {
+                "enum": [
+                  "None",
+                  "SpecialName",
+                  "RTSpecialName",
+                  "ReservedMask"
+                ],
+                "readOnly": true
+              },
+              "methodInfo": {
+                "type": "object",
+                "properties": {
+                  "Name": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "DeclaringType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "ReflectedType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "Module": {
+                    "$ref": "#/$defs/module"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "IsCollectible": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MetadataToken": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "Attributes": {
+                    "$ref": "#/$defs/methodAttributes"
+                  },
+                  "MethodImplementationFlags": {
+                    "$ref": "#/$defs/methodImplAttributes"
+                  },
+                  "CallingConvention": {
+                    "$ref": "#/$defs/callingConventions"
+                  },
+                  "IsAbstract": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsConstructor": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFinal": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsHideBySig": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSpecialName": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsStatic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsVirtual": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamily": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamilyAndAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsFamilyOrAssembly": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPrivate": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsPublic": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsConstructedGenericMethod": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericMethod": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsGenericMethodDefinition": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "ContainsGenericParameters": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MethodHandle": {
+                    "$ref": "#/$defs/runtimeMethodHandle"
+                  },
+                  "IsSecurityCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecuritySafeCritical": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsSecurityTransparent": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MemberType": {
+                    "$ref": "#/$defs/memberTypes"
+                  },
+                  "ReturnParameter": {
+                    "$ref": "#/$defs/parameterInfo"
+                  },
+                  "ReturnType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "ReturnTypeCustomAttributes": {
+                    "$ref": "#/$defs/iCustomAttributeProvider"
+                  }
+                },
+                "readOnly": true
+              },
+              "methodAttributes": {
+                "enum": [
+                  "PrivateScope",
+                  "ReuseSlot",
+                  "Private",
+                  "FamANDAssem",
+                  "Assembly",
+                  "Family",
+                  "FamORAssem",
+                  "Public",
+                  "MemberAccessMask",
+                  "UnmanagedExport",
+                  "Static",
+                  "Final",
+                  "Virtual",
+                  "HideBySig",
+                  "NewSlot",
+                  "VtableLayoutMask",
+                  "CheckAccessOnOverride",
+                  "Abstract",
+                  "SpecialName",
+                  "RTSpecialName",
+                  "PinvokeImpl",
+                  "HasSecurity",
+                  "RequireSecObject",
+                  "ReservedMask"
+                ],
+                "readOnly": true
+              },
+              "methodImplAttributes": {
+                "enum": [
+                  "IL",
+                  "Managed",
+                  "Native",
+                  "OPTIL",
+                  "CodeTypeMask",
+                  "Runtime",
+                  "ManagedMask",
+                  "Unmanaged",
+                  "NoInlining",
+                  "ForwardRef",
+                  "Synchronized",
+                  "NoOptimization",
+                  "PreserveSig",
+                  "AggressiveInlining",
+                  "AggressiveOptimization",
+                  "InternalCall",
+                  "MaxMethodImplVal"
+                ],
+                "readOnly": true
+              },
+              "callingConventions": {
+                "enum": [
+                  "Standard",
+                  "VarArgs",
+                  "Any",
+                  "HasThis",
+                  "ExplicitThis"
+                ],
+                "readOnly": true
+              },
+              "runtimeMethodHandle": {
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "$ref": "#/$defs/intPtr"
+                  }
+                },
+                "readOnly": true
+              },
+              "parameterInfo": {
+                "type": "object",
+                "properties": {
+                  "Attributes": {
+                    "$ref": "#/$defs/parameterAttributes"
+                  },
+                  "Member": {
+                    "$ref": "#/$defs/memberInfo"
+                  },
+                  "Name": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "ParameterType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "Position": {
+                    "$ref": "#/$defs/integer"
+                  },
+                  "IsIn": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsLcid": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsOptional": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsOut": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "IsRetval": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "DefaultValue": {
+                    "$ref": "#/$defs/object"
+                  },
+                  "RawDefaultValue": {
+                    "$ref": "#/$defs/object"
+                  },
+                  "HasDefaultValue": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "MetadataToken": {
+                    "$ref": "#/$defs/integer"
+                  }
+                },
+                "readOnly": true
+              },
+              "parameterAttributes": {
+                "enum": [
+                  "None",
+                  "In",
+                  "Out",
+                  "Lcid",
+                  "Retval",
+                  "Optional",
+                  "HasDefault",
+                  "HasFieldMarshal",
+                  "Reserved3",
+                  "Reserved4",
+                  "ReservedMask"
+                ],
+                "readOnly": true
+              },
+              "memberInfo": {
+                "type": "object",
+                "properties": {
+                  "MemberType": {
+                    "$ref": "#/$defs/memberTypes"
+                  },
+                  "Name": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "DeclaringType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "ReflectedType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "Module": {
+                    "$ref": "#/$defs/module"
+                  },
+                  "CustomAttributes": {
+                    "$ref": "#/$defs/arrayOfCustomAttributeData"
+                  },
+                  "IsCollectible": {
+                    "$ref": "#/$defs/boolean"
+                  },
+                  "MetadataToken": {
+                    "$ref": "#/$defs/integer"
+                  }
+                },
+                "readOnly": true
+              },
+              "iCustomAttributeProvider": {
+                "type": "object",
+                "readOnly": true
+              },
+              "arrayOfFieldInfo": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Name": {
+                      "$ref": "#/$defs/string"
+                    },
+                    "DeclaringType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "ReflectedType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "Module": {
+                      "$ref": "#/$defs/module"
+                    },
+                    "CustomAttributes": {
+                      "$ref": "#/$defs/arrayOfCustomAttributeData"
+                    },
+                    "IsCollectible": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "MetadataToken": {
+                      "$ref": "#/$defs/integer"
+                    },
+                    "MemberType": {
+                      "$ref": "#/$defs/memberTypes"
+                    },
+                    "Attributes": {
+                      "$ref": "#/$defs/fieldAttributes"
+                    },
+                    "FieldType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "IsInitOnly": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsLiteral": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsNotSerialized": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsPinvokeImpl": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSpecialName": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsStatic": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsAssembly": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsFamily": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsFamilyAndAssembly": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsFamilyOrAssembly": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsPrivate": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsPublic": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSecurityCritical": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSecuritySafeCritical": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "IsSecurityTransparent": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "FieldHandle": {
+                      "$ref": "#/$defs/runtimeFieldHandle"
+                    }
+                  },
+                  "readOnly": true
+                },
+                "readOnly": true
+              },
+              "fieldAttributes": {
+                "enum": [
+                  "PrivateScope",
+                  "Private",
+                  "FamANDAssem",
+                  "Assembly",
+                  "Family",
+                  "FamORAssem",
+                  "Public",
+                  "FieldAccessMask",
+                  "Static",
+                  "InitOnly",
+                  "Literal",
+                  "NotSerialized",
+                  "HasFieldRVA",
+                  "SpecialName",
+                  "RTSpecialName",
+                  "HasFieldMarshal",
+                  "PinvokeImpl",
+                  "HasDefault",
+                  "ReservedMask"
+                ],
+                "readOnly": true
+              },
+              "runtimeFieldHandle": {
+                "type": "object",
+                "properties": {
+                  "Value": {
+                    "$ref": "#/$defs/intPtr"
+                  }
+                },
+                "readOnly": true
+              },
+              "arrayOfMemberInfo": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/memberInfo"
+                },
+                "readOnly": true
+              },
+              "arrayOfMethodInfo": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/methodInfo"
+                },
+                "readOnly": true
+              },
+              "arrayOfPropertyInfo": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "Name": {
+                      "$ref": "#/$defs/string"
+                    },
+                    "DeclaringType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "ReflectedType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "Module": {
+                      "$ref": "#/$defs/module"
+                    },
+                    "CustomAttributes": {
+                      "$ref": "#/$defs/arrayOfCustomAttributeData"
+                    },
+                    "IsCollectible": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "MetadataToken": {
+                      "$ref": "#/$defs/integer"
+                    },
+                    "MemberType": {
+                      "$ref": "#/$defs/memberTypes"
+                    },
+                    "PropertyType": {
+                      "$ref": "#/$defs/type"
+                    },
+                    "Attributes": {
+                      "$ref": "#/$defs/propertyAttributes"
+                    },
+                    "IsSpecialName": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "CanRead": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "CanWrite": {
+                      "$ref": "#/$defs/boolean"
+                    },
+                    "GetMethod": {
+                      "$ref": "#/$defs/methodInfo"
+                    },
+                    "SetMethod": {
+                      "$ref": "#/$defs/methodInfo"
+                    }
+                  },
+                  "readOnly": true
+                },
+                "readOnly": true
+              },
+              "propertyAttributes": {
+                "enum": [
+                  "None",
+                  "SpecialName",
+                  "RTSpecialName",
+                  "HasDefault",
+                  "Reserved2",
+                  "Reserved3",
+                  "Reserved4",
+                  "ReservedMask"
+                ],
+                "readOnly": true
+              },
+              "arrayOfType1": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/type"
+                },
+                "readOnly": true
+              },
+              "arrayOfModule": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/module"
+                },
+                "readOnly": true
+              },
+              "integer2": {
+                "type": "integer",
+                "minimum": -9223372036854775808,
+                "maximum": 9223372036854775807,
+                "readOnly": true
+              },
+              "securityRuleSet": {
+                "enum": [
+                  "None",
+                  "Level1",
+                  "Level2"
+                ],
+                "readOnly": true
+              },
+              "moduleHandle": {
+                "type": "object",
+                "properties": {
+                  "MDStreamVersion": {
+                    "$ref": "#/$defs/integer"
+                  }
+                },
+                "readOnly": true
+              },
+              "iListOfCustomAttributeTypedArgument": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/customAttributeTypedArgument"
+                },
+                "readOnly": true
+              },
+              "customAttributeTypedArgument": {
+                "type": "object",
+                "properties": {
+                  "ArgumentType": {
+                    "$ref": "#/$defs/type"
+                  },
+                  "Value": {
+                    "$ref": "#/$defs/object"
+                  }
+                },
+                "readOnly": true
+              },
+              "iListOfCustomAttributeNamedArgument": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "MemberInfo": {
+                      "$ref": "#/$defs/memberInfo"
+                    },
+                    "TypedValue": {
+                      "$ref": "#/$defs/customAttributeTypedArgument"
+                    },
+                    "MemberName": {
+                      "$ref": "#/$defs/string"
+                    },
+                    "IsField": {
+                      "$ref": "#/$defs/boolean"
+                    }
+                  },
+                  "readOnly": true
+                },
+                "readOnly": true
+              },
+              "iDictionary": {
+                "type": "array",
+                "readOnly": true
+              },
+              "exception": {
+                "type": "object",
+                "properties": {
+                  "TargetSite": {
+                    "$ref": "#/$defs/methodBase"
+                  },
+                  "Message": {
+                    "$ref": "#/$defs/string"
+                  },
+                  "Data": {
+                    "$ref": "#/$defs/iDictionary"
+                  },
+                  "InnerException": {
+                    "$ref": "#/$defs/exception"
+                  },
+                  "HelpLink": {
+                    "type": "string"
+                  },
+                  "Source": {
+                    "type": "string"
+                  },
+                  "HResult": {
+                    "$ref": "#/$defs/integer1"
+                  },
+                  "StackTrace": {
+                    "$ref": "#/$defs/string"
+                  }
+                },
+                "readOnly": true
+              },
+              "readOnlyCollectionOfException": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/exception"
+                },
+                "readOnly": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

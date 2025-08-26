@@ -1,0 +1,14 @@
+﻿{
+  "Name": "AutoUiAct",
+  "Type": "App",
+  "Id": "YSqzFQjr302ArSWRb58bUw",
+  "Reference": "xRyh2Bev1ECs8QRhPsGX0w/YSqzFQjr302ArSWRb58bUw",
+  "Created": "2025-07-28T15:14:50.0295212Z",
+  "Updated": "2025-07-28T15:15:54.1262046Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=25.4.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
