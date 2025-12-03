@@ -1,0 +1,57 @@
+{
+  "DisplayName": "Get Databases",
+  "Tooltip": "This activity tests the MongoDB connection and returns a list of all available databases.",
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "username",
+      "DisplayName": "Username",
+      "Category": null,
+      "Tooltip": "MongoDB username",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "password",
+      "DisplayName": "Password",
+      "Category": null,
+      "Tooltip": "MongoDB password",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "cluster",
+      "DisplayName": "Cluster",
+      "Category": null,
+      "Tooltip": "MongoDB cluster",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "Output",
+      "DisplayName": "List of databases",
+      "Category": null,
+      "Tooltip": "It returns the list of databases for the corresponding credentials.",
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": true,
+      "IsPrincipal": false,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

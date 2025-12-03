@@ -1,0 +1,6 @@
+{
+  "Name": "MongoDB Coded Workflows Sample",
+  "ProjectType": "Library",
+  "Description": "This sample workflow shows how to connect to a MongoDB Atlas database from the UiPath coded automation.",
+  "MainFile": "NewActivity.xaml"
+}
