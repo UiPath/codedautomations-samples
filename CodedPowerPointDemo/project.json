@@ -4,12 +4,12 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.23.3-alpha.5359193]",
-    "UiPath.Mail.Activities": "[1.22.1]",
-    "UiPath.Presentations.Activities": "[1.14.0-preview]",
-    "UiPath.System.Activities": "[24.2.0-preview]",
-    "UiPath.Testing.Activities": "[23.10.0]",
-    "UiPath.UIAutomation.Activities": "[23.10.7]"
+    "UiPath.Excel.Activities": "[3.3.1]",
+    "UiPath.Mail.Activities": "[2.7.10]",
+    "UiPath.Presentations.Activities": "[2.4.1]",
+    "UiPath.System.Activities": "[25.12.2]",
+    "UiPath.Testing.Activities": "[25.10.1]",
+    "UiPath.UIAutomation.Activities": "[25.10.27]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -38,7 +38,6 @@
     "projectProfile": "Developement",
     "outputType": "Process",
     "libraryOptions": {
-      "includeOriginalXaml": false,
       "privateWorkflows": []
     },
     "processOptions": {
@@ -94,6 +93,12 @@
     {
       "filePath": "AddImageOrVideo2Slide.cs",
       "uniqueId": "45b13a10-1150-4481-9787-3bf07c133cbb",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CreateNewDocument.cs",
+      "uniqueId": "dd0dbdd0-ef63-4d57-89fa-437d510f8ff8",
       "input": [],
       "output": []
     }
