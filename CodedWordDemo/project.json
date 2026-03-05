@@ -4,12 +4,12 @@
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.23.4-beta.6017090]",
-    "UiPath.Mail.Activities": "[1.23.1]",
-    "UiPath.System.Activities": "[24.5.0-preview]",
-    "UiPath.Testing.Activities": "[24.10.0-preview]",
-    "UiPath.UIAutomation.Activities": "[24.10.0-preview]",
-    "UiPath.Word.Activities": "[1.20.0-alpha.6268437]"
+    "UiPath.Excel.Activities": "[3.3.1]",
+    "UiPath.Mail.Activities": "[2.7.10]",
+    "UiPath.System.Activities": "[25.12.2]",
+    "UiPath.Testing.Activities": "[25.10.1]",
+    "UiPath.UIAutomation.Activities": "[25.10.27]",
+    "UiPath.Word.Activities": "[2.4.1]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -38,7 +38,6 @@
     "projectProfile": "Developement",
     "outputType": "Process",
     "libraryOptions": {
-      "includeOriginalXaml": false,
       "privateWorkflows": []
     },
     "processOptions": {
@@ -76,6 +75,12 @@
     {
       "filePath": "UseWordDocument_InsertDataTable.cs",
       "uniqueId": "c0753c38-9b77-4e6e-bdf3-036494660d0c",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CreateNewDocument.cs",
+      "uniqueId": "c32b9d4f-8a7b-492f-8394-f34e4c363da5",
       "input": [],
       "output": []
     }
