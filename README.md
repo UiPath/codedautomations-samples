@@ -1,7 +1,12 @@
 # Coded Automations Samples
 - `ASPNET.Sample` - ASP.NET Core integration example with coded automations, demonstrating how to work with ASP.NET Core applications
+- `CodedCredentialsDemo` - an example on how to use Credentials coded automations
+- `CodedDatabaseDemo` - an example on how to use Database coded automations
 - `CodedExcelDemo` - an example on how to use Excel coded automations
+- `CodedFTPDemo` - an example on how to use FTP coded automations
+- `CodedJavaDemo` - an example on how to use Java coded automations
 - `CodedPowerPointDemo` - demonstrates PowerPoint coded automations including slide manipulation, text addition, formatting, and file operations
+- `CodedPythonDemo` - an example on how to use Python coded automations
 - `CodedWordDemo` - Word document automation examples showing document handling, picture insertion, data table insertion, and macro execution
 - `CrossXamlInteroperability` - showcases interoperability between coded automations and XAML workflows
 - `Form.CrossBrowser.Tests` - cross-browser tests using UiPath's UIAutomation package in coded automations

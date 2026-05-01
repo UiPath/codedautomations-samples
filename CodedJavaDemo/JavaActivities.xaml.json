@@ -1,0 +1,21 @@
+{
+  "DisplayName": "JavaActivities",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "JavaLibraryPath",
+      "DisplayName": "JavaLibraryPath",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.2.10-hotspot",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

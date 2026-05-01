@@ -1,0 +1,6 @@
+{
+  "Name": "CodedPythonDemo",
+  "ProjectType": "Process",
+  "Description": "Example of using python coded automations",
+  "MainFile": "Main.xaml"
+}

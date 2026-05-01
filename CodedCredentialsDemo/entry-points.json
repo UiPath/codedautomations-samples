@@ -1,0 +1,36 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "CodedCredentialsT.cs",
+      "uniqueId": "e33a7b72-00f6-4a3a-820e-ddcb17fb4def",
+      "type": "process"
+    },
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "49c8993e-11cf-4474-89ae-a0cfbc1368eb",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "password": {
+            "type": "string",
+            "x-default-expression": "\"somePassword\"",
+            "default": "somePassword"
+          },
+          "user": {
+            "type": "string",
+            "x-default-expression": "\"someUser\"",
+            "default": "someUser"
+          },
+          "target": {
+            "type": "string",
+            "x-default-expression": "\"someTarget\"",
+            "default": "someTarget"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}

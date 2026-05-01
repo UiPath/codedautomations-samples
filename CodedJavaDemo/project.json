@@ -1,0 +1,65 @@
+{
+  "name": "Java",
+  "projectId": "88b6c135-2549-4ed9-93e6-c30e64c5afbd",
+  "description": "Blank Process",
+  "main": "JavaActivities.xaml",
+  "dependencies": {
+    "UiPath.Java.Activities": "2.1.0-preview",
+    "UiPath.System.Activities": "[26.2.4]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.193.0",
+  "projectVersion": "1.0.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false,
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "JavaActivities.xaml",
+      "uniqueId": "5b8a9b54-0deb-4dc6-a260-678910c63fab",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "JavaCodedTests.cs",
+      "uniqueId": "1ef606f2-8f38-4945-ad2b-661b6eb86ede",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}
