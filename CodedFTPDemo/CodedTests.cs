@@ -57,8 +57,8 @@ namespace CodedFTPDemo
                 Console.WriteLine($"{f.FullName}");
             }
             
-            Console.WriteLine($"we found {filesList.Where(x => x.Type == FtpObjectType.Directory).Count()} directories");
-            Console.WriteLine($"we found {filesList.Where(x => x.Type == FtpObjectType.Link).Count()} links");
+            Console.WriteLine($"we found {filesList.Count(x => x.Type == FtpObjectType.Directory)} directories");
+            Console.WriteLine($"we found {filesList.Count(x => x.Type == FtpObjectType.Link)} links");
             
             //download some file from the FTP server
             await session.DownloadFiles("/home/ftpuser/image.png", "remoteImg.png", true);

@@ -28,7 +28,8 @@ namespace Java
             
             Console.WriteLine("execution begin");
             
-            //initialize java scope and load Jar
+            //Initialize java scope and load Jar
+            //Replace with valid JDK path
             await using var js = await java.UseJavaScope(new JavaScopeOptions() {JavaPath = @$"{Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles)}\Eclipse Adoptium\jdk-25.0.2.10-hotspot"});
             await js.LoadJar("Objects.jar");
             
@@ -44,18 +45,18 @@ namespace Java
             //Invoke instance method
             //Great care here if you specify the types (it should match with the objects)!!!!
             var javaObject = await js.CreateObject("uipath.java.test.Coordinate", [200D, 5.5F], [typeof(double), typeof(float)]);
-            var JavaObjectResultObjectMethod = await js.InvokeMethod("getCoordinateSum", javaObject);
-            var ObjectMethodResultValue = js.ConvertObject<double>(JavaObjectResultObjectMethod);
+            var javaObjectResultObjectMethod = await js.InvokeMethod("getCoordinateSum", javaObject);
+            var objectMethodResultValue = js.ConvertObject<double>(javaObjectResultObjectMethod);
             
-            Console.WriteLine($"instance method returned {ObjectMethodResultValue}");
+            Console.WriteLine($"instance method returned {objectMethodResultValue}");
             
             {
                 //no types specified, they are deduced
                 var javaObject2 = await js.CreateObject("uipath.java.test.Coordinate", [100D, 50.5]);
-                var JavaObjectResultObjectMethod2 = await js.InvokeMethod("getCoordinateSum", javaObject2);
-                var ObjectMethodResultValue2 = js.ConvertObject<double>(JavaObjectResultObjectMethod2);
+                var javaObjectResultObjectMethod2 = await js.InvokeMethod("getCoordinateSum", javaObject2);
+                var objectMethodResultValue2 = js.ConvertObject<double>(javaObjectResultObjectMethod2);
             
-                Console.WriteLine($"instance method (second call) returned {ObjectMethodResultValue2}");
+                Console.WriteLine($"instance method (second call) returned {objectMethodResultValue2}");
             }
         }
     }

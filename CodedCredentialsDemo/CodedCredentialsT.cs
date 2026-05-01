@@ -33,16 +33,16 @@ namespace CodedCredentialsDemo
             Console.WriteLine($"added credential for target {target}: {added}");
             
             var cred = credentials.GetSecureCredential(target, CredentialType.Generic, PersistanceType.LocalComputer);
-            Console.WriteLine($"retrieved credential: {nameof(cred.Found)} {cred.Found}, {nameof(cred.Username)} {cred.Username}, {nameof(cred.Password)} {cred.Password}");
+            Console.WriteLine($"retrieved credential: {nameof(cred.Found)} {cred.Found}, {nameof(cred.Username)} {cred.Username}");
             //credentials.DeleteCredential(target);
             
             var reqCred = credentials.RequestCredential("some message", "some title");
             
-            Console.WriteLine($"retrieved credential: {nameof(reqCred.Confirmed)} {reqCred.Confirmed}, {nameof(reqCred.Username)} {reqCred.Username}, {nameof(reqCred.Password)} {reqCred.Password}");
+            Console.WriteLine($"retrieved credential: {nameof(reqCred.Confirmed)} {reqCred.Confirmed}, {nameof(reqCred.Username)} {reqCred.Username}");
             
             var delCred = credentials.DeleteCredential(target);
             
-            Console.WriteLine("deleted credential for target {target}: {delCred}");
+            Console.WriteLine($"deleted credential for target {target}: {delCred}");
         }
     }
 }

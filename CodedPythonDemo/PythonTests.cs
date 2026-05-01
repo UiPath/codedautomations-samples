@@ -20,8 +20,8 @@ namespace CodedPythonDemo
         [Workflow]
         public async System.Threading.Tasks.Task Execute()
         {
-            //the above should be valid python installation paths
-            using var pyScope = await python.UsePythonScope(new PythonScopeOptions()
+            //the below should be valid python installation paths
+            await using var pyScope = await python.UsePythonScope(new PythonScopeOptions()
             {
                 LibraryPath = @$"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}\AppData\Local\Programs\Python\Python313\python313.dll",
                 Path = @$"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}\AppData\Local\Programs\Python\Python313"

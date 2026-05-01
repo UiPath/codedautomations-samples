@@ -103,15 +103,15 @@
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>DatabaseCodedDemo.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OracleUbuntuTests" sap:VirtualizedContainerService.HintSize="1271.6000000000001,3722.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OracleUbuntuTests" sap:VirtualizedContainerService.HintSize="1271.6000000000001,3342.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="tmp" />
       <Variable x:TypeArguments="x:String" Default="MYTESTTABLE" Name="tableName" />
       <Variable x:TypeArguments="ui:DatabaseConnection" Name="myDbCon" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt" />
-      <Variable x:TypeArguments="x:String" Name="dtStr" />
       <Variable x:TypeArguments="x:Boolean" Name="exists" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -126,7 +126,7 @@
         </OutArgument>
       </ui:DatabaseConnect.DatabaseConnection>
     </ui:DatabaseConnect>
-    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Check if table exists" sap:VirtualizedContainerService.HintSize="516.8,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2">
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Check if table exists" sap:VirtualizedContainerService.HintSize="516.8,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_2" Sql="SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=@tableName">
       <ui:ExecuteQuery.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">dt</CSharpReference>
@@ -138,15 +138,10 @@
         </InArgument>
       </ui:ExecuteQuery.ExistingDbConnection>
       <ui:ExecuteQuery.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="mt">
+        <InArgument x:TypeArguments="x:String" x:Key="tableName">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">tableName</CSharpValue>
         </InArgument>
       </ui:ExecuteQuery.Parameters>
-      <ui:ExecuteQuery.Sql>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_75">string.Format("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='{0}'", tableName)</CSharpValue>
-        </InArgument>
-      </ui:ExecuteQuery.Sql>
     </ui:ExecuteQuery>
     <Assign sap:VirtualizedContainerService.HintSize="516.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
       <Assign.To>
@@ -200,7 +195,7 @@
             </ui:ExecuteNonQuery.Parameters>
             <ui:ExecuteNonQuery.Sql>
               <InArgument x:TypeArguments="x:String">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_81">string.Format("CREATE TABLE {0} ( ID INTEGER PRIMARY KEY, NAME TEXT, CREATED_AT TEXT DEFAULT CURRENT_TIMESTAMP)", tableName)</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_93">$"CREATE TABLE {tableName} ( ID INTEGER PRIMARY KEY, NAME TEXT, CREATED_AT TEXT DEFAULT CURRENT_TIMESTAMP)"</CSharpValue>
               </InArgument>
             </ui:ExecuteNonQuery.Sql>
           </ui:ExecuteNonQuery>
@@ -216,7 +211,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Check if table exists" sap:VirtualizedContainerService.HintSize="516.8,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4">
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Check if table exists" sap:VirtualizedContainerService.HintSize="516.8,147.2" sap2010:WorkflowViewState.IdRef="ExecuteQuery_4" Sql="SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name=@tableName">
       <ui:ExecuteQuery.DataTable>
         <OutArgument x:TypeArguments="sd:DataTable">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">dt</CSharpReference>
@@ -228,15 +223,10 @@
         </InArgument>
       </ui:ExecuteQuery.ExistingDbConnection>
       <ui:ExecuteQuery.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="mt">
+        <InArgument x:TypeArguments="x:String" x:Key="tableName">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_84">tableName</CSharpValue>
         </InArgument>
       </ui:ExecuteQuery.Parameters>
-      <ui:ExecuteQuery.Sql>
-        <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_82">string.Format("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='{0}'", tableName)</CSharpValue>
-        </InArgument>
-      </ui:ExecuteQuery.Sql>
     </ui:ExecuteQuery>
     <Assign sap:VirtualizedContainerService.HintSize="516.8,174.4" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
@@ -255,7 +245,7 @@
         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_86">$"after possible creation table {tableName} exists {exists}"</CSharpValue>
       </InArgument>
     </WriteLine>
-    <Sequence DisplayName="Insert data table" sap:VirtualizedContainerService.HintSize="516.8,2065.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence DisplayName="Insert data table" sap:VirtualizedContainerService.HintSize="516.8,1685.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="firstId" />
         <Variable x:TypeArguments="s:DateTime" Name="startOp" />
@@ -284,7 +274,7 @@
         </ui:ExecuteQuery.Parameters>
         <ui:ExecuteQuery.Sql>
           <InArgument x:TypeArguments="x:String">
-            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_87">string.Format("SELECT COUNT(*) FROM {0}", tableName)</CSharpValue>
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_92">$"SELECT COUNT(*) FROM {tableName}"</CSharpValue>
           </InArgument>
         </ui:ExecuteQuery.Sql>
       </ui:ExecuteQuery>
@@ -305,13 +295,6 @@
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">$"firstId {firstId}"</CSharpValue>
         </InArgument>
       </WriteLine>
-      <ui:BuildDataTable DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="483.2,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; type=&quot;xs:decimal&quot; /&gt;&#xA;                &lt;xs:element name=&quot;NAME&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;CREATED_AT&quot; msdata:Caption=&quot;&quot; type=&quot;xs:dateTime&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xA;        &lt;xs:field xpath=&quot;ID&quot; /&gt;&#xA;      &lt;/xs:unique&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
-        <ui:BuildDataTable.DataTable>
-          <OutArgument x:TypeArguments="sd:DataTable">
-            <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">dt</CSharpReference>
-          </OutArgument>
-        </ui:BuildDataTable.DataTable>
-      </ui:BuildDataTable>
       <ui:InvokeCode ContinueOnError="{x:Null}" Code="// Create DataTable&#xA;dt = new System.Data.DataTable(&quot;dt&quot;);&#xA;&#xA;// Add columns&#xA;dt.Columns.Add(&quot;ID&quot;, typeof(decimal));&#xA;dt.Columns.Add(&quot;NAME&quot;, typeof(string));&#xA;dt.Columns.Add(&quot;CREATED_AT&quot;, typeof(System.DateTime));" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="483.2,196.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
         <ui:InvokeCode.Arguments>
           <OutArgument x:TypeArguments="sd:DataTable" x:Key="dt">
@@ -325,25 +308,6 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeCode>
-      <ui:OutputDataTable DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="483.2,112.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_5">
-        <ui:OutputDataTable.DataTable>
-          <InArgument x:TypeArguments="sd:DataTable">
-            <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_70">dt</CSharpValue>
-          </InArgument>
-        </ui:OutputDataTable.DataTable>
-        <ui:OutputDataTable.Text>
-          <OutArgument x:TypeArguments="x:String">
-            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">dtText</CSharpReference>
-          </OutArgument>
-        </ui:OutputDataTable.Text>
-      </ui:OutputDataTable>
-      <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" FileName="dt.txt" sap:VirtualizedContainerService.HintSize="483.2,175.2" sap2010:WorkflowViewState.IdRef="WriteTextFile_1">
-        <ui:WriteTextFile.Text>
-          <InArgument x:TypeArguments="x:String">
-            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_71">dtText</CSharpValue>
-          </InArgument>
-        </ui:WriteTextFile.Text>
-      </ui:WriteTextFile>
       <ui:RepeatNumberOfTimesX DisplayName="Repeat Number of Times - Fill table" sap:VirtualizedContainerService.HintSize="483.2,470.4" sap2010:WorkflowViewState.IdRef="RepeatNumberOfTimesX_1" NumberOfTimes="10">
         <ui:RepeatNumberOfTimesX.Body>
           <ActivityAction x:TypeArguments="x:Int32">
