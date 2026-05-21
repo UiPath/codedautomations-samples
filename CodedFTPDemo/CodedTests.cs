@@ -31,7 +31,7 @@ namespace CodedFTPDemo
             
             //create a ftp session using proper credentials
             string host = "Ubuntu64";
-            string user = "ftpuser";
+            string user = "dummyUser";
             string pass = "somepass";
             
             await using var session = await ftp.UseFtpSession(new FtpScopeOptions() {
@@ -45,7 +45,7 @@ namespace CodedFTPDemo
             var exists = await session.FileExists(fileName);
             Console.WriteLine($"file {fileName} exists {exists}");
             
-            fileName = "/home/ftpuser/image.png";
+            fileName = "<somepath>!/image.png";
             exists = await session.FileExists(fileName);
             Console.WriteLine($"file {fileName} exists {exists}");
             
@@ -61,7 +61,7 @@ namespace CodedFTPDemo
             Console.WriteLine($"we found {filesList.Count(x => x.Type == FtpObjectType.Link)} links");
             
             //download some file from the FTP server
-            await session.DownloadFiles("/home/ftpuser/image.png", "remoteImg.png", true);
+            await session.DownloadFiles("path_to_image.png", "remoteImg.png", true);
         }
         
     }

@@ -1,4 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="692,884" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="PYthonTestsXm" this:PYthonTestsXm.pyLib="[String.Format(&quot;{0}\AppData\Local\Programs\Python\Python313\python313.dll&quot;, Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))]" this:PYthonTestsXm.pyPath="[String.Format(&quot;{0}\AppData\Local\Programs\Python\Python313&quot;, Environment.GetFolderPath(Environment.SpecialFolder.UserProfile))]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/python" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="pyLib" Type="InArgument(x:String)" />
+    <x:Property Name="pyPath" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>692,884</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -94,7 +103,7 @@
       <AssemblyReference>CodedPythonDemo.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1208.6000000000001,642.0566666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1208.6000000000001,641.2566666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Object" Name="abcObj" />
       <Variable x:TypeArguments="p:PythonObject" Name="fromProp" />
@@ -137,7 +146,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </WriteLine>
-    <p:PythonScope DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="480,408" sap2010:WorkflowViewState.IdRef="PythonScope_1" LibraryPath="C:\Users\viorel.groza\AppData\Local\Programs\Python\Python313\python313.dll" OperationTimeout="10" Path="C:\Users\viorel.groza\AppData\Local\Programs\Python\Python313">
+    <p:PythonScope DisplayName="Python Scope" sap:VirtualizedContainerService.HintSize="480,408" sap2010:WorkflowViewState.IdRef="PythonScope_1" LibraryPath="[pyLib]" OperationTimeout="10" Path="[pyPath]">
       <p:PythonScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

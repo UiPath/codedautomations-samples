@@ -1955,8 +1955,8 @@
           },
           "user": {
             "type": "string",
-            "x-default-expression": "\"ftpuser\"",
-            "default": "ftpuser"
+            "x-default-expression": "\"dummyuser\"",
+            "default": "dummyuser"
           },
           "host": {
             "type": "string",

@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.pwd="xxxPass" this:Main.user="ftpuser" this:Main.host="Ubuntu64" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ftp" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.pwd="xxxPass" this:Main.user="dummyuser" this:Main.host="Ubuntu64" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/ftp" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="pwd" Type="InArgument(x:String)" />
     <x:Property Name="user" Type="InArgument(x:String)" />
@@ -109,21 +109,26 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>CodedFTPDemo.Core</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1271.6000000000001,1697.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1271.6000000000001,2336" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:WithFtpSession ClientCertificatePassword="{x:Null}" ClientCertificatePath="{x:Null}" ClientCertificateSecurePassword="{x:Null}" ContinueOnError="{x:Null}" SecurePassword="{x:Null}" CertificatePasswordInputModeSwitch="Password" DisplayName="Use FTP connection" sap:VirtualizedContainerService.HintSize="486.4,1674.4" Host="[host]" sap2010:WorkflowViewState.IdRef="WithFtpSession_1" Password="[pwd]" PasswordInputModeSwitch="Password" Port="21" ProxyPasswordInputModeSwitch="SecurePassword" ProxyPort="21" ProxySecurePassword="[new SecureString()]" ProxyServer="localhost" ProxyUser="someuser" Username="[user]">
+    <p:WithFtpSession ClientCertificatePassword="{x:Null}" ClientCertificatePath="{x:Null}" ClientCertificateSecurePassword="{x:Null}" ContinueOnError="{x:Null}" SecurePassword="{x:Null}" CertificatePasswordInputModeSwitch="Password" DisplayName="Use FTP connection" sap:VirtualizedContainerService.HintSize="520,2312.8" Host="[host]" sap2010:WorkflowViewState.IdRef="WithFtpSession_1" Password="[pwd]" PasswordInputModeSwitch="Password" Port="21" ProxyPasswordInputModeSwitch="SecurePassword" ProxyPort="21" ProxySecurePassword="[new SecureString()]" ProxyServer="localhost" ProxyUser="someuser" Username="[user]">
       <p:WithFtpSession.Body>
         <ActivityAction x:TypeArguments="p:IFtpSession">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="p:IFtpSession" Name="FtpSession" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1448" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="518.4,2086.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="exists" />
               <Variable x:TypeArguments="scg:IEnumerable(p:FtpObjectInfo)" Name="files" />
@@ -134,11 +139,11 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:FileExists ContinueOnError="{x:Null}" DisplayName="File Exists" Exists="[exists]" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="FileExists_2" RemotePath="1.txt" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[exists.ToString]" />
-            <p:FileExists ContinueOnError="{x:Null}" DisplayName="File Exists" Exists="[exists]" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="FileExists_3" RemotePath="/home/ftpuser/image.png" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[exists.ToString]" />
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <p:FileExists ContinueOnError="{x:Null}" DisplayName="File Exists" Exists="[exists]" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="FileExists_2" RemotePath="1.txt" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[exists.ToString]" />
+            <p:FileExists ContinueOnError="{x:Null}" DisplayName="File Exists" Exists="[exists]" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="FileExists_3" RemotePath="full_img_image.png" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[exists.ToString]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,376" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -146,17 +151,17 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p:DownloadFiles ContinueOnError="{x:Null}" Create="False" DisplayName="Download files" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="DownloadFiles_1" LocalPath="C:\Users\viorel.groza\Downloads" Overwrite="True" Recursive="False" RemotePath="1.txt" />
+                  <p:DownloadFiles ContinueOnError="{x:Null}" Create="False" DisplayName="Download files" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="DownloadFiles_1" LocalPath="[Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;)]" Overwrite="True" Recursive="False" RemotePath="1.txt" />
                 </Sequence>
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484.8,376" sap2010:WorkflowViewState.IdRef="CommentOut_4">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
@@ -164,21 +169,21 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <p:UploadFiles ContinueOnError="{x:Null}" Create="True" DisplayName="Upload Files" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="UploadFiles_1" LocalPath="C:\Users\viorel.groza\Downloads\image.png" Overwrite="True" Recursive="False" RemotePath="/newFolder/" />
+                  <p:UploadFiles ContinueOnError="{x:Null}" Create="True" DisplayName="Upload Files" sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="UploadFiles_1" LocalPath="[Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), &quot;Downloads&quot;, &quot;image.png&quot;)]" Overwrite="True" Recursive="False" RemotePath="/newFolder/" />
                 </Sequence>
               </ui:CommentOut.Body>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:CommentOut>
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="before enumerate object" />
-            <p:EnumerateObjects ContinueOnError="{x:Null}" DisplayName="Enumerate Objects" Files="[files]" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="EnumerateObjects_1" Recursive="True" RemotePath="." />
-            <p:DirectoryExists ContinueOnError="{x:Null}" DisplayName="Directory Exists" Exists="[folder_exists]" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="DirectoryExists_1" RemotePath="/newFolder" />
-            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="451.2,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;folder exists &quot; + folder_exists.ToString]" />
-            <ui:ForEach x:TypeArguments="p:FtpObjectInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentItem" sap:VirtualizedContainerService.HintSize="451.2,295.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[files]">
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="before enumerate object" />
+            <p:EnumerateObjects ContinueOnError="{x:Null}" DisplayName="Enumerate Objects" Files="[files]" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="EnumerateObjects_1" Recursive="True" RemotePath="." />
+            <p:DirectoryExists ContinueOnError="{x:Null}" DisplayName="Directory Exists" Exists="[folder_exists]" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="DirectoryExists_1" RemotePath="/newFolder" />
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="484.8,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;folder exists &quot; + folder_exists.ToString]" />
+            <ui:ForEach x:TypeArguments="p:FtpObjectInfo" CurrentIndex="{x:Null}" DisplayName="For Each currentItem" sap:VirtualizedContainerService.HintSize="484.8,295.2" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[files]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="p:FtpObjectInfo">
                   <ActivityAction.Argument>
