@@ -1,0 +1,6 @@
+{
+  "Name": "CodedFTPDemo",
+  "ProjectType": "Process",
+  "Description": "Sample of coded ftp",
+  "MainFile": "Main.xaml"
+}

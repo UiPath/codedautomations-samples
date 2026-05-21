@@ -1,0 +1,6 @@
+{
+  "Name": "Java",
+  "ProjectType": "Process",
+  "Description": "Blank Process",
+  "MainFile": "JavaActivities.xaml"
+}

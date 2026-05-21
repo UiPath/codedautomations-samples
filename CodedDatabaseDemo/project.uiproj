@@ -1,0 +1,6 @@
+{
+  "Name": "DatabaseCodedDemo",
+  "ProjectType": "Process",
+  "Description": "Sample on how to use database activities coded API",
+  "MainFile": "Main.xaml"
+}

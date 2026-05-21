@@ -1,0 +1,45 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "password",
+      "DisplayName": "password",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "somePassword",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "user",
+      "DisplayName": "user",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "someUser",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "target",
+      "DisplayName": "target",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": "someTarget",
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

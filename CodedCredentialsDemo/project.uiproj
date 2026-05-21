@@ -1,0 +1,6 @@
+{
+  "Name": "CodedCredentialsDemo",
+  "ProjectType": "Process",
+  "Description": "Sample for credentials coded stuff",
+  "MainFile": "Main.xaml"
+}
